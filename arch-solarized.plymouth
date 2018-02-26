@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Arch Linux Solarized
+Description=This is a solarized Arch Linux logo theme for Plymouth
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/arch-solarized
+ScriptFile=/usr/share/plymouth/themes/arch-solarized/arch-solarized.script
