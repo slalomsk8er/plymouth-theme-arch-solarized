@@ -1,20 +1,14 @@
-bg = Image("img/background.png");
-panel = Image("img/panel.png");
+image = Image("img/bg.png");
 
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
 pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
 
-bgSprite = Sprite(bg);
-bgSprite.SetX(pos_x);
-bgSprite.SetY(pos_y);
-
-panelSprite = Sprite(panel);
-panelSprite.SetX(pos_x);
-panelSprite.SetY(pos_y);
+sprite = Sprite(image);
+sprite.SetX(pos_x);
+sprite.SetY(pos_y);
 
 fun refresh_callback () {
-  bgSprite.SetOpacity(1);
-  panelSprite.SetOpacity(1);
+  sprite.SetOpacity(1);
   spr.SetZ(15);
 }
 
