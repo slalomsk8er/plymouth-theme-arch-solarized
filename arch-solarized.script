@@ -33,7 +33,7 @@ fun dialog_setup()
     
     box.sprite = Sprite(box.image);
     box.x = Window.GetX() + Window.GetWidth()  / 2 - box.image.GetWidth ()/2;
-    box.y = Window.GetY() + Window.GetHeight() / 4 - box.image.GetHeight()/2;
+    box.y = Window.GetY() + Window.GetHeight() / 1.5 - box.image.GetHeight()/2;
     box.z = 10000;
     box.sprite.SetPosition(box.x, box.y, box.z);
     
@@ -86,7 +86,7 @@ fun display_password_callback (prompt, bullets)
         if (!dialog.bullet[index])
           {
             dialog.bullet[index].sprite = Sprite(dialog.bullet_image);
-            dialog.bullet[index].x = dialog.entry.x + 1 + index * dialog.bullet_image.GetWidth();
+            dialog.bullet[index].x = dialog.entry.x + ( 1 + index ) * dialog.bullet_image.GetWidth();
             dialog.bullet[index].y = dialog.entry.y + dialog.entry.image.GetHeight() / 2 - dialog.bullet_image.GetHeight() / 2;
             dialog.bullet[index].z = dialog.entry.z + 1;
             dialog.bullet[index].sprite.SetPosition(dialog.bullet[index].x, dialog.bullet[index].y, dialog.bullet[index].z);
