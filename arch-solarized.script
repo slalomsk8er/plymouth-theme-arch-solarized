@@ -1,5 +1,8 @@
 image = Image("img/bg.png");
 
+Window.SetBackgroundTopColor(0.0, 0.169, 0.212);
+Window.SetBackgroundBottomColor(0.0, 0.169, 0.212);
+
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
 pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
 
@@ -30,7 +33,7 @@ fun dialog_setup()
     
     box.sprite = Sprite(box.image);
     box.x = Window.GetX() + Window.GetWidth()  / 2 - box.image.GetWidth ()/2;
-    box.y = Window.GetY() + Window.GetHeight() / 2 - box.image.GetHeight()/2;
+    box.y = Window.GetY() + Window.GetHeight() / 4 - box.image.GetHeight()/2;
     box.z = 10000;
     box.sprite.SetPosition(box.x, box.y, box.z);
     
@@ -83,7 +86,7 @@ fun display_password_callback (prompt, bullets)
         if (!dialog.bullet[index])
           {
             dialog.bullet[index].sprite = Sprite(dialog.bullet_image);
-            dialog.bullet[index].x = dialog.entry.x + index * dialog.bullet_image.GetWidth();
+            dialog.bullet[index].x = dialog.entry.x + 1 + index * dialog.bullet_image.GetWidth();
             dialog.bullet[index].y = dialog.entry.y + dialog.entry.image.GetHeight() / 2 - dialog.bullet_image.GetHeight() / 2;
             dialog.bullet[index].z = dialog.entry.z + 1;
             dialog.bullet[index].sprite.SetPosition(dialog.bullet[index].x, dialog.bullet[index].y, dialog.bullet[index].z);
